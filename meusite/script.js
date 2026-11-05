@@ -1,0 +1,18 @@
+
+let botao = document.getElementById("btnAdicionar");
+
+botao.onclick = function() {
+    let nomeInput = document.getElementById("nomeAluno");
+    let nome = nomeInput.value.trim();
+
+    if (nome === "") {
+        alert("Por favor, digite um nome!");
+    } else {
+        let novoLi = document.createElement("li");
+        novoLi.innerHTML = nome;
+        
+        document.getElementById("listaAlunos").appendChild(novoLi);
+        
+        nomeInput.value = "";
+    }
+};
